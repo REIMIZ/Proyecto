@@ -15,6 +15,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var ContraTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+
+              if let correo = defaults.value(forKey: "correo") as? String
+              {
+                  performSegue(withIdentifier: "LoginInicio", sender: self)
+              }
 
          
     }
