@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="103.79464285714285"/>
         </scene>
-        <!--Principal View Controller-->
+        <!--Productos-->
         <scene sceneID="hle-zm-CE8">
             <objects>
                 <viewController id="hvw-Rq-Vjg" customClass="PrincipalViewController" customModule="Proyecto" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,32 +89,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rif-rm-OXS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="310"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rif-rm-OXS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celda" id="1i3-Rk-JqG">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celda" rowHeight="119" id="1i3-Rk-JqG" customClass="CustomCell" customModule="Proyecto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1i3-Rk-JqG" id="pWr-T9-Zbq">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-IO-CwB">
+                                                    <rect key="frame" x="5" y="5" width="404" height="109"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Genshin Impact, Peluche Hu Tao" translatesAutoresizingMaskIntoConstraints="NO" id="VcS-Ov-fAG">
+                                                            <rect key="frame" x="8" y="24.5" width="60" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="3Fm-J9-5N3"/>
+                                                                <constraint firstAttribute="width" constant="60" id="PaZ-9T-Oa8"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="edS-NF-yiC"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="m4s-fP-maY"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genshin Impact, Peluche, Hu Tao" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-2n-DWc">
+                                                            <rect key="frame" x="76" y="24.5" width="320" height="60"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="3OM-2n-DWc" firstAttribute="bottom" secondItem="VcS-Ov-fAG" secondAttribute="bottom" id="ERf-9E-Ql5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3OM-2n-DWc" secondAttribute="trailing" constant="8" id="HrH-XN-Juw"/>
+                                                        <constraint firstItem="VcS-Ov-fAG" firstAttribute="leading" secondItem="EQI-IO-CwB" secondAttribute="leading" constant="8" id="RDP-jo-7Zr"/>
+                                                        <constraint firstItem="VcS-Ov-fAG" firstAttribute="centerY" secondItem="EQI-IO-CwB" secondAttribute="centerY" id="Ykn-zc-WUN"/>
+                                                        <constraint firstItem="3OM-2n-DWc" firstAttribute="top" secondItem="VcS-Ov-fAG" secondAttribute="top" id="jVF-30-MnW"/>
+                                                        <constraint firstItem="VcS-Ov-fAG" firstAttribute="leading" secondItem="EQI-IO-CwB" secondAttribute="leading" constant="8" id="knQ-hT-hgJ"/>
+                                                        <constraint firstItem="3OM-2n-DWc" firstAttribute="leading" secondItem="VcS-Ov-fAG" secondAttribute="trailing" constant="8" symbolic="YES" id="nKK-jD-KRk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="EQI-IO-CwB" secondAttribute="bottom" constant="5" id="80l-00-TbM"/>
+                                                <constraint firstItem="EQI-IO-CwB" firstAttribute="leading" secondItem="pWr-T9-Zbq" secondAttribute="leading" constant="5" id="ES3-ds-5Cy"/>
+                                                <constraint firstItem="EQI-IO-CwB" firstAttribute="top" secondItem="pWr-T9-Zbq" secondAttribute="top" constant="5" id="QMp-UF-Guc"/>
+                                                <constraint firstAttribute="trailing" secondItem="EQI-IO-CwB" secondAttribute="trailing" constant="5" id="wT7-Rs-6Qt"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ProductsViews" destination="pWr-T9-Zbq" id="rWL-4h-suX"/>
+                                            <outlet property="namelbl" destination="3OM-2n-DWc" id="ndm-kg-N0P"/>
+                                            <outlet property="productImg" destination="VcS-Ov-fAG" id="Vrj-oy-NSq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WMR-oU-1MA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rif-rm-OXS" firstAttribute="top" secondItem="WMR-oU-1MA" secondAttribute="top" id="JD5-f2-DFh"/>
+                            <constraint firstItem="rif-rm-OXS" firstAttribute="trailing" secondItem="WMR-oU-1MA" secondAttribute="trailing" id="aI2-FD-cey"/>
+                            <constraint firstItem="rif-rm-OXS" firstAttribute="leading" secondItem="WMR-oU-1MA" secondAttribute="leading" id="aj7-md-SUU"/>
+                            <constraint firstItem="WMR-oU-1MA" firstAttribute="bottom" secondItem="rif-rm-OXS" secondAttribute="bottom" id="mvM-Wc-Ub2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m7a-ud-MU5">
+                    <navigationItem key="navigationItem" title="Productos" id="m7a-ud-MU5">
                         <barButtonItem key="rightBarButtonItem" title="Cerrar Sesion" id="We7-0n-eZ2">
                             <connections>
                                 <action selector="cerrarBtn:" destination="hvw-Rq-Vjg" id="hS9-rV-8Zj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ProductView" destination="rif-rm-OXS" id="wcV-q3-Mds"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZB-qZ-z6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,6 +302,7 @@
         <segue reference="tNn-5W-XXA"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Genshin Impact, Peluche Hu Tao" width="1500" height="1201"/>
         <image name="template" width="256" height="256"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

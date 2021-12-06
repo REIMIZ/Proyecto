@@ -11,8 +11,16 @@ import FirebaseAuth
 
 class PrincipalViewController: UIViewController {
 
+    @IBOutlet weak var ProductView: UITableView!
+    
+    let Productos = ["Genshin Impact, Peluche Hu Tao", "Halo, Funko Pop!, Master Chief", "League of Legends, Figura, Ahri", "South Park, Muñecos Decorativos", "Kanojo Okarishimasu, Mizuhara Chizuru, Nendroid", "Evangelion, Peluche, Rei Chiquita", "Overwatch, D.Va, Nendroid", "Fire Emblem, Figura, Lucina", "Shrek, Almohada, Genji", "RWBY, Ruby Rose, Nendroid"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ProductView.delegate = self
+        ProductView.dataSource = self
+        
 
         self.navigationItem.setHidesBackButton(true, animated: true)
       
@@ -41,5 +49,27 @@ class PrincipalViewController: UIViewController {
                 print("Error signing out: \(error.localizedDescription)")
             }
     }
+    
+}
+
+extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Productos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = ProductView.dequeueReusableCell(withIdentifier: "celda") as! CustomCell
+        let Proc = Productos[indexPath.row]
+        cell.productImg.image = UIImage(named: Proc)
+        cell.namelbl.text = Proc
+        
+        return cell
+    }
+    
     
 }
