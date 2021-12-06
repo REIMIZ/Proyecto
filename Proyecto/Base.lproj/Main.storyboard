@@ -112,9 +112,16 @@
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="m4s-fP-maY"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genshin Impact, Peluche, Hu Tao" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-2n-DWc">
-                                                            <rect key="frame" x="76" y="24.5" width="320" height="60"/>
-                                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Genshin Impact, Peluche, Hu Tao" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-2n-DWc">
+                                                            <rect key="frame" x="76" y="-11" width="320" height="60"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-y1-Ye2">
+                                                            <rect key="frame" x="76" y="70" width="156" height="23"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -141,6 +148,7 @@
                                         <connections>
                                             <outlet property="ProductsViews" destination="pWr-T9-Zbq" id="rWL-4h-suX"/>
                                             <outlet property="namelbl" destination="3OM-2n-DWc" id="ndm-kg-N0P"/>
+                                            <outlet property="preciolbl" destination="j6s-y1-Ye2" id="oFt-p4-j8R"/>
                                             <outlet property="productImg" destination="VcS-Ov-fAG" id="Vrj-oy-NSq"/>
                                         </connections>
                                     </tableViewCell>
@@ -165,11 +173,42 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ProductView" destination="rif-rm-OXS" id="wcV-q3-Mds"/>
+                        <segue destination="Vl0-Np-9Zz" kind="show" identifier="detalles" id="TmU-9f-qYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZB-qZ-z6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="756.69642857142856"/>
+        </scene>
+        <!--Detalles-->
+        <scene sceneID="tk4-7N-ZMn">
+            <objects>
+                <viewController id="Vl0-Np-9Zz" customClass="DetallesViewController" customModule="Proyecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YT4-g8-fBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSO-YG-hbV">
+                                <rect key="frame" x="87" y="472" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="regresarBtn:" destination="Vl0-Np-9Zz" eventType="touchUpInside" id="gzh-dc-b6S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QWM-CD-Z5s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalles" id="5DG-h9-6wk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42c-KU-AYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579.7101449275362" y="756.69642857142856"/>
         </scene>
         <!--Login-->
         <scene sceneID="XuD-Ov-4fx">

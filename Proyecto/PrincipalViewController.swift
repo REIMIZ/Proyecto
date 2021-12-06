@@ -14,6 +14,7 @@ class PrincipalViewController: UIViewController {
     @IBOutlet weak var ProductView: UITableView!
     
     let Productos = ["Genshin Impact, Peluche Hu Tao", "Halo, Funko Pop!, Master Chief", "League of Legends, Figura, Ahri", "South Park, Muñecos Decorativos", "Kanojo Okarishimasu, Mizuhara Chizuru, Nendroid", "Evangelion, Peluche, Rei Chiquita", "Overwatch, D.Va, Nendroid", "Fire Emblem, Figura, Lucina", "Shrek, Almohada, Genji", "RWBY, Ruby Rose, Nendroid"]
+    let Precios = ["$530", "$300", "$3000", "$540", "$800", "$450", "$750", "$2000", "$380", "$850"]
     
     
     override func viewDidLoad() {
@@ -65,10 +66,22 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ProductView.dequeueReusableCell(withIdentifier: "celda") as! CustomCell
         let Proc = Productos[indexPath.row]
+        let price = Precios[indexPath.row]
         cell.productImg.image = UIImage(named: Proc)
         cell.namelbl.text = Proc
+        cell.preciolbl.text = price
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detalles", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detalles" {
+                   let objEditarC = segue.destination as! DetallesViewController
+                   
+               }
     }
     
     
