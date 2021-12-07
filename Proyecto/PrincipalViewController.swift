@@ -75,7 +75,15 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detalles", sender: nil)
+        if let vc = storyboard?.instantiateViewController(identifier: "Detallazos") as? DetallesViewController {
+            vc.img = UIImage(named: Productos[indexPath.row])!
+            vc.neim = Productos[indexPath.row]
+            vc.presio = Precios[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detalles" {

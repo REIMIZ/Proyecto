@@ -9,8 +9,22 @@ import UIKit
 
 class DetallesViewController: UIViewController {
 
+    @IBOutlet weak var profileIMG: UIImageView!
+    @IBOutlet weak var descripcionlbl: UILabel!
+    @IBOutlet weak var premiumlbl: UILabel!
+    
+    var img = UIImage()
+    var neim = ""
+    var presio = ""
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileIMG.image = img
+        descripcionlbl.text = neim
+        premiumlbl.text = presio
 
     }
     
