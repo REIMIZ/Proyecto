@@ -10,6 +10,7 @@
 		380B1322275E776D000A9C3F /* DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380B1321275E776C000A9C3F /* DetallesViewController.swift */; };
 		383DEEE22758613B00340647 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383DEEE12758613B00340647 /* RegistroViewController.swift */; };
 		383DEEE52758615F00340647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383DEEE42758615F00340647 /* LoginViewController.swift */; };
+		384130D227601B7300C14575 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384130D127601B7300C14575 /* MapaViewController.swift */; };
 		3842D2BA275DADAB00B5D9AC /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842D2B9275DADAB00B5D9AC /* CustomCell.swift */; };
 		3847CD4527583BAF0007336B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847CD4427583BAF0007336B /* AppDelegate.swift */; };
 		3847CD4727583BAF0007336B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847CD4627583BAF0007336B /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		380B1321275E776C000A9C3F /* DetallesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesViewController.swift; sourceTree = "<group>"; };
 		383DEEE12758613B00340647 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		383DEEE42758615F00340647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		384130D127601B7300C14575 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		3842D2B9275DADAB00B5D9AC /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3847CD4127583BAF0007336B /* Proyecto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proyecto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3847CD4427583BAF0007336B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3885D49D27596BFB0034F536 /* PrincipalViewController.swift */,
 				3842D2B9275DADAB00B5D9AC /* CustomCell.swift */,
 				380B1321275E776C000A9C3F /* DetallesViewController.swift */,
+				384130D127601B7300C14575 /* MapaViewController.swift */,
 			);
 			path = Proyecto;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				383DEEE22758613B00340647 /* RegistroViewController.swift in Sources */,
 				3847CD4527583BAF0007336B /* AppDelegate.swift in Sources */,
 				3885D49E27596BFB0034F536 /* PrincipalViewController.swift in Sources */,
+				384130D227601B7300C14575 /* MapaViewController.swift in Sources */,
 				380B1322275E776D000A9C3F /* DetallesViewController.swift in Sources */,
 				383DEEE52758615F00340647 /* LoginViewController.swift in Sources */,
 				3842D2BA275DADAB00B5D9AC /* CustomCell.swift in Sources */,
