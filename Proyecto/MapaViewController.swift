@@ -44,7 +44,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         navigationController?.popViewController(animated: true)
     }
     
-    func prepararTrazarRuta(coordenadasDestino:CLLocationCoordinate2D)
+    func preTrazarRuta(coordenadasDestino:CLLocationCoordinate2D)
             {
                 if let LAT = latitud2, let LON = longitud2
                 {
@@ -141,7 +141,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                             self.Map.selectAnnotation(anotacion, animated: true)
                             
                             
-                            self.prepararTrazarRuta(coordenadasDestino: ruta.coordinate)
+                            self.preTrazarRuta(coordenadasDestino: ruta.coordinate)
                             self.Map.showsUserLocation = true
                             
                             
